@@ -236,9 +236,8 @@ html,body{width:100%;height:100%;overflow:hidden;background:#000;color:var(--whi
     <div id="s8-phone" style="width:clamp(100px,12vw,165px);height:clamp(200px,24vw,330px);border:2px solid rgba(14,165,233,0.55);border-radius:22px;background:linear-gradient(180deg,#0a1a2e,#000);box-shadow:0 0 28px rgba(14,165,233,0.28),0 0 60px rgba(14,165,233,0.1),inset 0 0 18px rgba(14,165,233,0.05);display:flex;flex-direction:column;align-items:center;padding:16px 12px;opacity:0;margin-bottom:36px;position:relative;">
       <div style="width:50px;height:5px;background:rgba(14,165,233,0.3);border-radius:3px;margin-bottom:14px;"></div>
       <div style="width:100%;display:flex;flex-direction:column;gap:7px;margin-top:14px;">
-        <div id="s8-m1" style="background:rgba(14,165,233,0.25);border:1px solid rgba(14,165,233,0.35);color:white;padding:6px 10px;border-radius:10px 10px 10px 2px;font-size:clamp(7px,.9vw,10px);opacity:0;align-self:flex-start;">Oi! Tô pensando em você...</div>
-        <div id="s8-m2" style="background:rgba(255,122,0,0.25);border:1px solid rgba(255,122,0,0.35);color:white;padding:6px 10px;border-radius:10px 10px 2px 10px;font-size:clamp(7px,.9vw,10px);opacity:0;align-self:flex-end;">Saudades! 🙏</div>
-        <div id="s8-m3" style="background:rgba(14,165,233,0.25);border:1px solid rgba(14,165,233,0.35);color:white;padding:6px 10px;border-radius:10px 10px 10px 2px;font-size:clamp(7px,.9vw,10px);opacity:0;align-self:flex-start;">Vem domingo! ❤️</div>
+        <div id="s8-m1" style="background:rgba(14,165,233,0.25);border:1px solid rgba(14,165,233,0.35);color:white;padding:7px 10px;border-radius:10px 10px 10px 2px;font-size:clamp(7px,.9vw,10px);opacity:0;align-self:flex-start;line-height:1.4;">Lembrei de você hoje e quis mandar uma mensagem. Deus não te esqueceu. Tô aqui se precisar. 🙏</div>
+        <div id="s8-m2" style="background:rgba(14,165,233,0.25);border:1px solid rgba(14,165,233,0.35);color:white;padding:7px 10px;border-radius:10px 10px 10px 2px;font-size:clamp(7px,.9vw,10px);opacity:0;align-self:flex-start;line-height:1.4;">Oi, passei pra avisar. Tô orando por você. Se quiser conversar ou precisar de qualquer coisa, pode me chamar. ❤️</div>
       </div>
       <div id="s8-dots" style="align-self:flex-start;margin-top:8px;display:flex;gap:4px;opacity:0;">
         <div style="width:5px;height:5px;border-radius:50%;background:var(--blue-glow);animation:float .8s ease-in-out infinite;"></div>
@@ -647,13 +646,12 @@ function a8(){
   pMode='normal';
   gsap.set(['#s8-phone','#s8-t1','#s8-t2'],{opacity:0});
   gsap.set('#s8-phone',{y:-36,scale:.9});
-  gsap.set(['#s8-m1','#s8-m2','#s8-m3','#s8-dots'],{opacity:0,y:8});
+  gsap.set(['#s8-m1','#s8-m2','#s8-dots'],{opacity:0,y:8});
   gsap.to('#s8-phone',{opacity:1,y:0,scale:1,duration:1.2,ease:'power3.out',delay:.5});
   gsap.to('#s8-t1',{opacity:1,duration:.8,ease:'power2.out',delay:1.5});
   addT(()=>gsap.to('#s8-dots',{opacity:1,y:0,duration:.5}),1900);
-  addT(()=>{gsap.to('#s8-dots',{opacity:0,duration:.3});gsap.to('#s8-m1',{opacity:1,y:0,duration:.5});},2700);
-  addT(()=>gsap.to('#s8-m2',{opacity:1,y:0,duration:.5}),3500);
-  addT(()=>gsap.to('#s8-m3',{opacity:1,y:0,duration:.5}),4300);
+  addT(()=>{gsap.to('#s8-dots',{opacity:0,duration:.3});gsap.to('#s8-m1',{opacity:1,y:0,duration:.6});},2700);
+  addT(()=>gsap.to('#s8-m2',{opacity:1,y:0,duration:.6}),4200);
   addT(()=>gsap.to('#s8-t2',{opacity:1,duration:.8,ease:'power2.out'}),2800);
 }
 
